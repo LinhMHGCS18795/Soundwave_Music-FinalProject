@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "SendVerifyEmail";
+    Layout = "~/Views/Shared/Main_Layout.cshtml";
+}
+
+<section class="mt_mb_send_verify__account">
+    <div class="container d-flex justify-content-center margin_mobile_fixed">
+        <div class="row">
+            <div class="col-12 vetify__account">
+                <div class="vetify__account_header text-center">
+                    <h1>Email Verification</h1>
+                </div>
+                <div class="pd_vetify__account">
+                    <div class="vetify__account_body p-5">
+                        <div class="vetify__account_img text-center mb-3">
+                            <img srcset="~/Images/Design/Email_Logo.png 2x" alt="Email" />
+                        </div>
+                        <div class="vetify__account_text">
+                            <p class="fs-17px font_roboto_bold mb-4">Thank you for sign up into Soundwave system</p>
+                            <p>Wellcome <span class="font_roboto_medium">@ViewBag.Email</span> to Soundwave streaming music website</p>
+                            <p class="mb-4">You have one more verification step before using our service.</p>
+                            <div class="resent_email_message">
+                                <form id="formresend">
+                                    <input type="hidden" name="account_id" id="acc_id" value="@ViewBag.User_id" />
+                                    <span>You have not receive any email</span><a onclick="sendmail()" id="resendid" class="Resend-email" style="cursor:pointer;"> RESEND</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
