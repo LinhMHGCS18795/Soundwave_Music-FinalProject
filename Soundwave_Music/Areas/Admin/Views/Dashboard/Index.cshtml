@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Dashboard";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    var culture = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
 }
 <link href="~/Content/admin_css/morris.css" rel="stylesheet" />
 <!--begin::Content-->
@@ -208,7 +209,41 @@
                         </div>
                     </div>
                     <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-lg-3">
+                        <div class="small-box">
+                            <div class="inner" style="background-color: #d8d527d4;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-box-seam" style="color: #3B82F6;"></i>
+                                    </div>
+                                </div>
+                                <div class="text_count">
+                                    <p class="report_type">Total Order</p>
+                                    <p class="count_total">@ViewBag.countorder</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Col--><!--begin::Col-->
+                    <div class="col-lg-3">
+                        <div class="small-box">
+                            <div class="inner" style="background-color: #e914da;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-cash-coin" style="color: #ffa900d0;"></i>
+                                    </div>
+                                </div>
+                                <div class="text_count">
+                                    <p class="report_type">Turnover</p>
+                                    <p class="count_total">@((ViewBag.turnover).ToString("#,###₫", culture.NumberFormat))</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Col-->
                 </div>
+                <br />
                 <!--end::Row-->
             </div>
             <!--end::Card-->

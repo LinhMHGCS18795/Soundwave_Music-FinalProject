@@ -32,6 +32,10 @@ namespace Soundwave_Music.Areas.Admin.Controllers
             ViewBag.countcommentalbum = _appdb.Album_Comment.Count();
             //Count all comment music video
             ViewBag.countcommentmv = _appdb.Video_Comment.Count();
+            //Count order
+            ViewBag.countorder = _appdb.Orders.Count();
+            //Count turnover
+            ViewBag.turnover = _appdb.Orders.Sum(o => o.Total);            
             return View();
         }
     }

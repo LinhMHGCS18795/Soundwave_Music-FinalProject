@@ -394,10 +394,9 @@
                                     <div class="menu-item">
                                         <a class="menu-link
                                    @(ViewContext.RouteData.Values["Action"].ToString() == "OrderIndex" ? "active" : "")
-                                   @(ViewContext.RouteData.Values["Action"].ToString() == "OrderDetails" ? "active" : "")
-                                   @(ViewContext.RouteData.Values["Action"].ToString() == "OrderTrash" ? "active" : "")
-                                   @(ViewContext.RouteData.Values["Action"].ToString() == "OrderDelete" ? "active" : "")
-                                   " href="@Url.Action("OrderIndex", "Orders")">
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "OrderCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "OrderDetails" ? "active" : "")                                   
+                                   " href="@Url.Action("OrderIndex", "Order")">
                                             <span class="menu-icon">
                                                 <i class="bi bi-box-seam fs-2"></i>
                                             </span>

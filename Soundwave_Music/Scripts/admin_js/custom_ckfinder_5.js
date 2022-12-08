@@ -1,7 +1,0 @@
-﻿$("#selectimage6").on('click', function () {
-    var finder = new CKFinder();
-    finder.selectActionFunction = function (fileurl) {
-        $("#linkimages6").val(fileurl);
-    };
-    finder.popup();
-});
