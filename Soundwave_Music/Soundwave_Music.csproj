@@ -230,6 +230,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AlbumCommentController.cs" />
     <Compile Include="Areas\Admin\Controllers\AlbumController.cs" />
     <Compile Include="Areas\Admin\Controllers\APIController.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
@@ -238,8 +239,8 @@
     <Compile Include="Areas\Admin\Controllers\GenreController.cs" />
     <Compile Include="Areas\Admin\Controllers\MusicAreasController.cs" />
     <Compile Include="Areas\Admin\Controllers\MusicVideoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NewsCommentController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
-    <Compile Include="Areas\Admin\Controllers\OrdersController.cs" />
     <Compile Include="Areas\Admin\Controllers\PaymentController.cs" />
     <Compile Include="Areas\Admin\Controllers\PlaylistsController.cs" />
     <Compile Include="Areas\Admin\Controllers\SingerController.cs" />
@@ -247,6 +248,7 @@
     <Compile Include="Areas\Admin\Controllers\SongController.cs" />
     <Compile Include="Areas\Admin\Controllers\SupplierController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserManagementAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\VideoCommentController.cs" />
     <Compile Include="Areas\Admin\Controllers\VIPPackController.cs" />
     <Compile Include="Common\ApplicationEmail.cs" />
     <Compile Include="Common\AssignUserRole.cs" />
@@ -262,6 +264,7 @@
     <Compile Include="Controllers\GuestVideoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsHomeController.cs" />
+    <Compile Include="Controllers\PaymentQRCodeController.cs" />
     <Compile Include="Controllers\UserAlbumController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\UserSingerController.cs" />
@@ -296,7 +299,6 @@
     <Compile Include="Models\News.cs" />
     <Compile Include="Models\News_Comment.cs" />
     <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\Order_Detail.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Permission.cs" />
     <Compile Include="Models\Playlist.cs" />
@@ -1351,6 +1353,7 @@
     <Content Include="Images\ImagesImagesCollection\momocode.jpg" />
     <Content Include="Images\ImagesImagesCollection\newimage.png" />
     <Content Include="Images\ImagesImagesCollection\thuongemchonao_banner.png" />
+    <Content Include="Images\ImagesImagesCollection\ZaloPayQRCode.png" />
     <Content Include="Images\_thumbs\ImagesAlbum\Album22mono.png" />
     <Content Include="Images\_thumbs\ImagesAlbum\co don tren sofa.png" />
     <Content Include="Images\_thumbs\ImagesAlbum\cochoicochiu.png" />
@@ -2924,6 +2927,12 @@
     <Content Include="Areas\Admin\Views\News\NewsCreate.cshtml" />
     <Content Include="Areas\Admin\Views\News\NewsDetail.cshtml" />
     <Content Include="Areas\Admin\Views\News\NewsDelete.cshtml" />
+    <Content Include="Areas\Admin\Views\AlbumComment\AlbumCommentIndex.cshtml" />
+    <Content Include="Areas\Admin\Views\AlbumComment\AlbumCommentDelete.cshtml" />
+    <Content Include="Areas\Admin\Views\VideoComment\VideoCommentIndex.cshtml" />
+    <Content Include="Areas\Admin\Views\VideoComment\VideoCommentDelete.cshtml" />
+    <Content Include="Areas\Admin\Views\NewsComment\NewsCommentIndex.cshtml" />
+    <Content Include="Areas\Admin\Views\NewsComment\NewsCommentDelete.cshtml" />
     <None Include="Scripts\jquery-3.6.0-vsdoc.js" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
@@ -3107,6 +3116,8 @@
     <Content Include="Views\UserSinger\Singer.cshtml" />
     <Content Include="Views\GuestSinger\Singer.cshtml" />
     <Content Include="Views\GuestSinger\SingerDetail.cshtml" />
+    <Content Include="Views\PaymentQRCode\MomoQRCode.cshtml" />
+    <Content Include="Views\PaymentQRCode\ZaloPayQRCode.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

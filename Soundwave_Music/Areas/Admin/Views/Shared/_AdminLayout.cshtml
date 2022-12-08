@@ -303,6 +303,45 @@
                                         </a>
                                     </div>
                                     <!--end::comment manager-->
+                                    <!--begin::comment manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "AlbumCommentIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "AlbumCommentDelete" ? "active" : "")
+                                   " href="@Url.Action("AlbumCommentIndex", "AlbumComment")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-chat-dots-fill fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Album Comment</span>
+                                        </a>
+                                    </div>
+                                    <!--end::comment manager-->
+                                    <!--begin::comment manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VideoCommentIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VideoCommentDelete" ? "active" : "")
+                                   " href="@Url.Action("VideoCommentIndex", "VideoComment")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-chat-dots-fill fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Music Video Comment</span>
+                                        </a>
+                                    </div>
+                                    <!--end::comment manager-->
+                                    <!--begin::comment manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "NewsCommentIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "NewsCommentDelete" ? "active" : "")
+                                   " href="@Url.Action("NewsCommentIndex", "NewsComment")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-chat-dots-fill fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">News Comment</span>
+                                        </a>
+                                    </div>
+                                    <!--end::comment manager-->
                                     <!--begin::tags-->
                                     <div class="menu-item">
                                         <div class="menu-content pt-8 pb-2">

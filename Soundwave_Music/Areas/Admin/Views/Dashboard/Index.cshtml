@@ -1,7 +1,220 @@
-﻿
+﻿@using Soundwave_Music.Common
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-
-<h2>Index</h2>
-
+<link href="~/Content/admin_css/morris.css" rel="stylesheet" />
+<!--begin::Content-->
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Toolbar-->
+    <div class="toolbar" id="kt_toolbar">
+        <!--begin::Container-->
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+            <!--begin::Page title-->
+            <div data-kt-place="true" data-kt-place-mode="prepend" data-kt-place-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center me-3 flex-wrap mb-5 mb-lg-0 lh-1">
+                <!--begin::Title-->
+                <h1 class="d-flex align-items-center text-dark fw-bolder my-1 fs-3">Statistical</h1>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <!--end::Separator-->
+            </div>
+            <!--end::Page title-->
+            <!--begin::Actions-->
+            <!--end::Actions-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Toolbar-->
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div id="kt_content_container" class="container">
+            <!--begin::Card-->
+            <div class="card">
+                <!--begin::Row-->
+                <div class="row gy-5 gx-xl-8 mt-1 pb-2 ps-5 pe-5">
+                    <!--begin::Col-->
+                    <!--begin::Col-->
+                    <div class="col-lg-3">
+                        <!-- small box -->
+                        <div class="small-box">
+                            <div class="inner" style="background-color: #3B82F6; ">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-people-fill" style="color: #CCFBF1;"></i>
+                                    </div>
+                                </div>
+                                <div class="text_count">
+                                    <p class="report_type">Total Users</p>
+                                    <p class="count_total">@ViewBag.countuser</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-lg-3">
+                        <!-- small box -->
+                        <div class="small-box">
+                            <div class="inner" style="background-color: #CCFBF1; ">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-music-note-beamed" style="color: #14B8A6;"></i>
+                                    </div>
+                                </div>
+                                <div class="text_count">
+                                    <p class="report_type">Total Song</p>
+                                    <p class="count_total">@ViewBag.countsong</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-lg-3">
+                        <!-- small box -->
+                        <div class="small-box">
+                            <div class="inner" style="background-color: #FEF9C3;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-play-circle-fill" style="color: #EAB308;"></i>
+                                    </div>
+                                </div>
+                                <div class="text_count">
+                                    <p class="report_type">Total Album</p>
+                                    <p class="count_total">@ViewBag.countalbum</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-lg-3">
+                        <div class="small-box">
+                            <div class="inner" style="background-color: #DBEAFE;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-film" style="color: #3B82F6;"></i>
+                                    </div>
+                                </div>
+                                <div class="text_count">
+                                    <p class="report_type">Total Music Video</p>
+                                    <p class="count_total">@ViewBag.countmv</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-lg-3">
+                        <div class="small-box">
+                            <div class="inner" style="background-color: #e406063e;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-newspaper" style="color: #3B82F6;"></i>
+                                    </div>
+                                </div>
+                                <div class="text_count">
+                                    <p class="report_type">Total News</p>
+                                    <p class="count_total">@ViewBag.countnews</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-lg-3">
+                        <div class="small-box">
+                            <div class="inner" style="background-color: #00ffff;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-pencil-square" style="color: #3B82F6;"></i>
+                                    </div>
+                                </div>
+                                <div class="text_count">
+                                    <p class="report_type">Total Composer</p>
+                                    <p class="count_total">@ViewBag.countcomposer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-lg-3">
+                        <div class="small-box">
+                            <div class="inner" style="background-color: #00ff2188;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-mic-fill" style="color: #3B82F6;"></i>
+                                    </div>
+                                </div>
+                                <div class="text_count">
+                                    <p class="report_type">Total Singer</p>
+                                    <p class="count_total">@ViewBag.countsinger</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-lg-3">
+                        <div class="small-box">
+                            <div class="inner" style="background-color: #ffa900d0;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-chat-right-text" style="color: #3B82F6;"></i>
+                                    </div>
+                                </div>
+                                <div class="text_count">
+                                    <p class="report_type">Total Comment Song</p>
+                                    <p class="count_total">@ViewBag.countcommentsong</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-lg-3">
+                        <div class="small-box">
+                            <div class="inner" style="background-color: #14B8A6;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-chat-right-text" style="color: #3B82F6;"></i>
+                                    </div>
+                                </div>
+                                <div class="text_count">
+                                    <p class="report_type">Total Comment Album</p>
+                                    <p class="count_total">@ViewBag.countcommentalbum</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-lg-3">
+                        <div class="small-box">
+                            <div class="inner" style="background-color: #3d0aced1;">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-chat-right-text" style="color: #3B82F6;"></i>
+                                    </div>
+                                </div>
+                                <div class="text_count">
+                                    <p class="report_type">Total Comment Music Video</p>
+                                    <p class="count_total">@ViewBag.countcommentmv</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Row-->
+            </div>
+            <!--end::Card-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+</div>
+<!--end::content-->

@@ -9,12 +9,6 @@ namespace Soundwave_Music.Models
     [Table("Product")]
     public partial class Product
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Product()
-        {
-            Order_Detail = new HashSet<Order_Detail>();
-        }
-
         [Key]
         public int product_id { get; set; }
 
@@ -50,9 +44,6 @@ namespace Soundwave_Music.Models
         [StringLength(500)]
         public string image { get; set; }
 
-        public string description { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order_Detail> Order_Detail { get; set; }
+        public string description { get; set; }        
     }
 }

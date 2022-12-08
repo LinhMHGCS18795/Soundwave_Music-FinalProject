@@ -78,7 +78,7 @@
                                 </ul>
                             </li>
                             <!--end:Li-->
-                        }                        
+                        }
                         else
                         {
                             if (User.Identity.GetRole() == 1)
@@ -100,18 +100,14 @@
                             else if (User.Identity.GetRole() == 2)
                             {
                                 <!--begin:Li-->
-                                <li style="margin-right: 8px" class="item_nav_top dropdown1">
+                                <li style=" margin-right: 10px;" class="dropdown1 item_nav_top">
                                     <a style=" color: #29324e; " class="d-flex" href="#">
                                         <span class="material-icons">assignment_turned_in</span><div id="elementID">VIP Package</div>
                                     </a>
-                                    <div class="dropdown-content">
-                                        <div>
-                                            <img style="object-fit: contain; width: 100%;" src="~/Images/ImagesImagesCollection/momocode.jpg" />
-                                        </div>
-                                        <div style="text-align: center">
-                                            <button>Buy</button>
-                                        </div>
-                                    </div>
+                                    <ul class="dropdown-content">
+                                        <li><a href="@Url.Action("MomoQRCode", "PaymentQRCode")">Pay with Momo</a></li>
+                                        <li><a href="@Url.Action("ZaloPayQRCode", "PaymentQRCode")">Pay with Zalo Pay</a></li>
+                                    </ul>
                                 </li>
                                 <!--end:Li-->
                             }

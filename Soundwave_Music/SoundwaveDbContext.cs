@@ -27,7 +27,6 @@ namespace Soundwave_Music.Models
         public virtual DbSet<News> News { get; set; }
         public virtual DbSet<News_Comment> News_Comment { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<Order_Detail> Order_Detail { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<Permission> Permissions { get; set; }
         public virtual DbSet<Playlist> Playlists { get; set; }
@@ -144,21 +143,6 @@ namespace Soundwave_Music.Models
                 .WithRequired(e => e.News_Comment)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Order>()
-                .Property(e => e.Status)
-                .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Order>()
-                .HasMany(e => e.Order_Detail)
-                .WithRequired(e => e.Order)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Order_Detail>()
-                .Property(e => e.Status)
-                .IsFixedLength()
-                .IsUnicode(false);
-
             modelBuilder.Entity<Payment>()
                 .Property(e => e.Status)
                 .IsFixedLength()
@@ -188,11 +172,6 @@ namespace Soundwave_Music.Models
                 .Property(e => e.status)
                 .IsFixedLength()
                 .IsUnicode(false);
-
-            modelBuilder.Entity<Product>()
-                .HasMany(e => e.Order_Detail)
-                .WithRequired(e => e.Product)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Reply_News_Comment>()
                 .HasMany(e => e.Like_Reply_News_Comment)

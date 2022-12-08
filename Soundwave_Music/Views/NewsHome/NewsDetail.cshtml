@@ -12,7 +12,7 @@
     // ** New News Release
     var recentnews = (List<Soundwave_Music.Models.News>)ViewBag.RecentNews;
 }
-
+<link href="~/Content/my_css/summernote-bs4.min.css" rel="stylesheet" />
 <!-- section -->
 @section scripts{
     <script>
@@ -122,7 +122,7 @@
                     var data = $("#create_comment_post").serialize();
                     $.ajax({
                         type: "GET",
-                        url: "/News/CommentNews",
+                        url: "/NewsHome/CommentNews",
                         data: data,
                         success: function (result) {
                             if (result == true) {
@@ -424,7 +424,7 @@
                             {
                                 <li>
                                     <div class="post_head">
-                                        <a href="@Url.Action("NewsDetail", "News", new {id = item.News_id})"><img src="@item.Image" alt="@item.News_id"></a>
+                                        <a href="@Url.Action("NewsDetail", "News", new {id = item.News_id})"><img style="width:100%; height:250px" src="@item.Image" alt="@item.News_id"></a>
                                         <a href="@Url.Action("NewsDetail", "News", new {id = item.News_id})">@item.News_title</a>
                                     </div>
                                     <div class="d-flex justify-content-between">
